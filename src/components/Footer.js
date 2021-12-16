@@ -1,5 +1,4 @@
 import React from "react";
-import GlitchText from "react-glitch-effect/core/GlitchText";
 import { FaInstagram, FaTwitch, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export const Footer = () => {
@@ -24,7 +23,12 @@ export const Footer = () => {
       <div className="container px-20 mx-auto">
         {/* <div className="flex flex-wrap"> */}
         <div className="w-full px-4 mx-auto text-center md:w-6/12">
-          <GlitchText
+          <div className="hero-container">
+            <h2 className="text-4xl hero glitch layers" data-text="JUICE ME UP">
+              <span>JUICE ME UP</span>
+            </h2>
+          </div>
+          {/* <GlitchText
             className="text-5xl font-semibold text-gray-300 font-bebas"
             component="h4"
             color1="rgb(0,0,0)"
@@ -32,7 +36,7 @@ export const Footer = () => {
             duration={5000}
           >
             JUICE ME UP
-          </GlitchText>
+          </GlitchText> */}
           <div className="flex items-center justify-center gap-3 mt-8">
             <a
               href="https://twitch.tv/willneff"

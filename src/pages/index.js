@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import GlitchText from "react-glitch-effect/core/GlitchText";
 import Snowfall from "react-snowfall";
 import Layout from "../components/Layout";
 import magic from "../assets/images/neff_magic.jpeg";
@@ -58,7 +57,15 @@ export default function Home({ data }) {
         <div className="container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="w-full px-4 ml-auto mr-auto text-center lg:w-7/12">
-              <GlitchText
+              <div className="hero-container">
+                <h2
+                  className="text-6xl hero glitch layers"
+                  data-text="HEY NOW..."
+                >
+                  <span>HEY NOW...</span>
+                </h2>
+              </div>
+              {/* <GlitchText
                 className="text-6xl font-semibold text-gray-600/80 font-bebas"
                 component="h1"
                 color1="rgb(256,256,256)"
@@ -66,7 +73,7 @@ export default function Home({ data }) {
                 duration={5000}
               >
                 Hey now...
-              </GlitchText>
+              </GlitchText> */}
               <p className="mt-4 text-2xl text-gray-300 font-roboto">
                 My name is <span className="text-4xl">Will Neff</span>.
                 <br />
@@ -188,7 +195,17 @@ export default function Home({ data }) {
           {/* BIO SECTION */}
           <div className="flex flex-wrap items-center mt-32 font-roboto">
             <div className="w-full px-4 ml-auto mr-auto md:w-5/12">
-              <GlitchText
+              <div className="hero-container">
+                <h2
+                  className="text-4xl hero glitch layers"
+                  data-text="WE ARE THE ARCH VILLAINS"
+                >
+                  <span>
+                    WE ARE THE <br /> ARCH VILLAINS
+                  </span>
+                </h2>
+              </div>
+              {/* <GlitchText
                 className="w-2/3 mx-auto text-4xl font-semibold text-center text-gray-300 font-bebas"
                 component="h3"
                 color1="rgb(0,0,0)"
@@ -196,7 +213,7 @@ export default function Home({ data }) {
                 duration={5000}
               >
                 WE ARE THE ARCH VILLAINS
-              </GlitchText>
+              </GlitchText> */}
               <p className="mt-4 mb-4 text-lg font-light leading-relaxed text-gray-100">
                 Debitis sit occaecati ut nam sequi sapiente nihil. Et maxime a
                 delectus ea laudantium. Aut nam voluptatem enim dolor et dolorem
@@ -280,15 +297,11 @@ export default function Home({ data }) {
         </div>
 
         <div className="container px-4 mx-auto">
-          <GlitchText
-            className="w-2/3 mx-auto font-semibold text-center text-gray-300 text-7xl font-bebas"
-            component="h3"
-            color1="rgb(0,0,0)"
-            color2="rgb(172,21,21)"
-            duration={5000}
-          >
-            MERCH
-          </GlitchText>
+          <div className="hero-container">
+            <h2 className="text-6xl hero glitch layers" data-text="MERCH">
+              <span>MERCH</span>
+            </h2>
+          </div>
           <div className="grid grid-cols-2 gap-4 mx-auto lg:grid-cols-3 md:w-5/6">
             {renderMerch()}
           </div>
