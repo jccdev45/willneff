@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neff-anime: url("../assets/images/neff_anime.jpeg");
+  --neff-banner: url("../assets/images/neff_banner.jpeg");
+  --neff-fear: url("../assets/images/neff_fear.jpeg");
+  --neff-g4: url("../assets/images/neff_g4.jpeg");
+  --neff-magic: url("../assets/images/neff_magic.jpeg");
+  --neff-planes: url("../assets/images/neff_planes.jpeg");
+  --neff-thieves: url("../assets/images/neff_thieves.jpeg");
+  --neff-azan: url("../assets/images/will_azan.jpeg");
+}
+
+/* SCREEN READER ONLY */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@layer base {
+  body {
+    @apply bg-black;
+  }
+  /* body {
+    background-image: var(--neff-banner);
+    @apply bg-cover bg-fixed bg-center bg-no-repeat backdrop-blur-[8px];
+  } */
+  /* REMOVE ANIMATIONS FOR THOSE WHO HAVE THEM TURNED OFF */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* BG IMGs */
+.neff-anime {
+  background-image: var(--neff-anime);
+}
+.neff-banner {
+  background-image: var(--neff-banner);
+}
+.neff-fear {
+  background-image: var(--neff-fear);
+}
+.neff-g4 {
+  background-image: var(--neff-g4);
+}
+.neff-magic {
+  background-image: var(--neff-magic);
+}
+.neff-planes {
+  background-image: var(--neff-planes);
+}
+.neff-thieves {
+  background-image: var(--neff-thieves);
+}
+.neff-azan {
+  background-image: var(--neff-azan);
+}

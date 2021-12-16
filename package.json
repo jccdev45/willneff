@@ -1,7 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "willneff",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Personal site for content creator extraordinaire Will Neff. Will primarily streams on Twitch and is part of both G4TV and 100 Thieves. He's got great hair and sick dance moves.",
+  "author": "Jordan Cruz-Correa (JCCDev) <jccdev45@gmail.com>",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -14,13 +15,35 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.0",
     "gatsby": "^4.3.0",
+    "gatsby-background-image": "^1.5.3",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.3.0",
+    "gatsby-plugin-postcss": "^5.3.0",
+    "gatsby-plugin-purgecss": "^6.1.0",
+    "gatsby-plugin-react-helmet": "^5.3.0",
+    "gatsby-plugin-sharp": "^4.3.0",
+    "gatsby-source-filesystem": "^4.4.0",
+    "gatsby-transformer-sharp": "^4.3.0",
+    "postcss": "^8.4.4",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-glitch-effect": "^3.1.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-snowfall": "^1.1.1"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "tailwindcss": "^3.0.0"
   },
+  "keywords": [
+    "willneff",
+    "will neff",
+    "william nefferson",
+    "great hair"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
