@@ -81,6 +81,8 @@ export default function Home({ data }) {
                 <a
                   className="underline transition-colors duration-200 ease-in-out rounded-lg decoration-white/70 hover:bg-red-500/20 decoration-dotted decoration-2"
                   href="https://twitch.tv/willneff"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Twitch
                 </a>
@@ -88,6 +90,8 @@ export default function Home({ data }) {
                 <a
                   className="underline transition-colors duration-200 ease-in-out rounded-lg decoration-white/70 hover:bg-red-500/20 decoration-dotted decoration-2"
                   href="https://twitch.tv/g4tv"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   G4TV's
                 </a>{" "}
@@ -95,6 +99,8 @@ export default function Home({ data }) {
                 <a
                   className="underline transition-colors duration-200 ease-in-out rounded-lg decoration-white/70 hover:bg-red-500/20 decoration-dotted decoration-2"
                   href="https://www.youtube.com/channel/UCnrX2_FoKieobtw19PiphDw"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   100 Thieves
                 </a>
