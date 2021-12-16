@@ -1,13 +1,22 @@
 import React from "react";
-// import Layout from "../components/layout"
-import SEO from "../components/seo";
+// import SEOh from "../components/seo";
 
-const NotFoundPage = () => (
-  <>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </>
-);
+function NotFoundPage() {
+  return (
+    <>
+      {/* <SEOh
+        title="404: Not found"
+        description="test"
+        lang="test"
+        title="test"
+      /> */}
+      <div>
+        <h2 className="inline-block p-3 my-8 text-2xl font-bold bg-yellow-400">
+          Looks like this page is a ghost that got abducted by aliens...
+        </h2>
+      </div>
+    </>
+  );
+}
 
 export default NotFoundPage;

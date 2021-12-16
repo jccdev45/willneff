@@ -5,16 +5,6 @@ import GlitchText from "react-glitch-effect/core/GlitchText";
 import Snowfall from "react-snowfall";
 import Layout from "../components/Layout";
 import magic from "../assets/images/neff_magic.jpeg";
-// import planes from "../assets/images/neff_planes.jpeg";
-
-import merch1 from "../assets/images/merch/merch_1.jpeg";
-import merch2 from "../assets/images/merch/merch_2.jpeg";
-import merch3 from "../assets/images/merch/merch_3.jpeg";
-import merch4 from "../assets/images/merch/merch_4.jpeg";
-import merch5 from "../assets/images/merch/merch_5.jpeg";
-import merch6 from "../assets/images/merch/merch_6.jpeg";
-
-const merch = [merch1, merch2, merch3, merch4, merch5, merch6];
 
 export const query = graphql`
   {
