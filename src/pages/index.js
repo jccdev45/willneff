@@ -95,7 +95,16 @@ export default function Home({ data }) {
                 >
                   G4TV's
                 </a>{" "}
-                Attack of the Show or making content with{" "}
+                Attack of the Show, co-hosting{" "}
+                <a
+                  className="underline transition-colors duration-200 ease-in-out rounded-lg decoration-white/70 hover:bg-red-500/20 decoration-dotted decoration-2"
+                  href="https://www.youtube.com/channel/UCnI_h3e6b5jGLfly2SY57SA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Fear & Malding{" "}
+                </a>
+                with Hasan Piker or making all manner of content with{" "}
                 <a
                   className="underline transition-colors duration-200 ease-in-out rounded-lg decoration-white/70 hover:bg-red-500/20 decoration-dotted decoration-2"
                   href="https://www.youtube.com/channel/UCnrX2_FoKieobtw19PiphDw"
