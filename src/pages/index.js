@@ -1,29 +1,62 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Snowfall from "react-snowfall";
 import Layout from "../components/Layout";
 import magic from "../assets/images/neff_magic.jpeg";
+import { Helmet } from "react-helmet";
 
-export const query = graphql`
-  {
-    allFile(
-      filter: { relativeDirectory: { eq: "merch" }, extension: { eq: "jpeg" } }
-    ) {
-      edges {
-        node {
-          id
-          name
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, width: 1000, quality: 100)
+export default function Home() {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+        allFile(
+          filter: {
+            relativeDirectory: { eq: "merch" }
+            extension: { eq: "jpeg" }
+          }
+        ) {
+          edges {
+            node {
+              id
+              name
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, width: 1000, quality: 100)
+              }
+            }
           }
         }
       }
-    }
-  }
-`;
+    `
+  );
 
-export default function Home({ data }) {
+  // const img = useStaticQuery(graphql`
+  //   {
+  //     allFile(
+  //       filter: {
+  //         relativeDirectory: { eq: "merch" }
+  //         extension: { eq: "jpeg" }
+  //       }
+  //     ) {
+  //       edges {
+  //         node {
+  //           id
+  //           name
+  //           childImageSharp {
+  //             gatsbyImageData(placeholder: BLURRED, width: 1000, quality: 100)
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+
   const renderMerch = () => {
     const edges = data.allFile.edges;
 
@@ -43,6 +76,30 @@ export default function Home({ data }) {
 
   return (
     <Layout>
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          {
+            name: `description`,
+            content: data.site.siteMetadata.description,
+          },
+          {
+            property: `og:title`,
+            content: data.site.siteMetadata.title,
+          },
+          {
+            property: `og:description`,
+            content: data.site.siteMetadata.description,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+        ]}
+      >
+        <meta name="icon" href="../assets/images/favicon-16x16.png" />
+      </Helmet>
+
       <div className="fixed top-0 left-0 z-50 w-screen h-screen pointer-events-none">
         <Snowfall color="red" snowflakeCount={10} />
       </div>

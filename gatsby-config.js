@@ -6,6 +6,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Will Neff",
+        short_name: "Will Neff",
+        start_url: "/",
+        display: "standalone",
+        icon: "src/assets/images/neff_logo.png",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`roboto condensed\:400,700`, `bebas neue`],
