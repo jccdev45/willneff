@@ -36,39 +36,26 @@ export default function Home() {
     `
   );
 
-  // const img = useStaticQuery(graphql`
-  //   {
-  //     allFile(
-  //       filter: {
-  //         relativeDirectory: { eq: "merch" }
-  //         extension: { eq: "jpeg" }
-  //       }
-  //     ) {
-  //       edges {
-  //         node {
-  //           id
-  //           name
-  //           childImageSharp {
-  //             gatsbyImageData(placeholder: BLURRED, width: 1000, quality: 100)
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
-
   const renderMerch = () => {
     const edges = data.allFile.edges;
 
-    return edges.map((item, index) => {
+    return edges.map((item) => {
       const img = getImage(item.node.childImageSharp);
       return (
-        <div key={index} className="w-full h-auto overflow-hidden">
+        <div
+          key={item.node.id}
+          className="w-full relative h-auto group overflow-hidden"
+        >
           <GatsbyImage
             image={img}
             alt="Will Neff Merch"
-            className="w-full h-full transition-transform duration-200 ease-in-out scale-105 hover:scale-100 hover:saturate-[1.25]"
+            className="w-full h-full transition-transform duration-200 ease-in-out scale-105 group-hover:scale-100 group-hover:saturate-[1.25]"
           />
+          <div className="absolute top-0 opacity-0 group-hover:opacity-100 group-hover:cursor-pointer grid transition-all duration-200 ease-in-out left-0 w-full h-full bg-black/30 place-items-center pt-16">
+            <span className="bg-black/30 text-white p-2 rounded-full uppercase text-2xl">
+              {item.node.name}
+            </span>
+          </div>
         </div>
       );
     });
@@ -111,28 +98,19 @@ export default function Home() {
             className="absolute w-full h-full bg-black/75"
           ></span>
         </div>
-        <div className="container relative mx-auto">
+        <div className="container relative mx-auto mt-12">
           <div className="flex flex-wrap items-center">
             <div className="w-full px-4 ml-auto mr-auto text-center lg:w-7/12">
               <div className="hero-container">
                 <h2
-                  className="text-6xl hero glitch layers"
+                  className="text-3xl md:text-5xl hero glitch layers"
                   data-text="HEY NOW..."
                 >
                   <span>HEY NOW...</span>
                 </h2>
               </div>
-              {/* <GlitchText
-                className="text-6xl font-semibold text-gray-600/80 font-bebas"
-                component="h1"
-                color1="rgb(256,256,256)"
-                color2="rgb(172,21,21)"
-                duration={5000}
-              >
-                Hey now...
-              </GlitchText> */}
-              <p className="mt-4 text-2xl text-gray-300 font-roboto">
-                My name is <span className="text-4xl">Will Neff</span>.
+              <p className="mt-4 text-xl md:text-2xl text-gray-300 font-roboto">
+                My name is <span className="text-3xl">Will Neff</span>.
                 <br />
                 You can find me on{" "}
                 <a
@@ -170,7 +148,7 @@ export default function Home() {
                 >
                   100 Thieves
                 </a>
-                .<span className="block mt-2">Stay a while and listen.</span>
+                .<span className="block mt-4">Stay a while and listen.</span>
                 {/* Hey now! My name is Will Neff. I'm a Twitch streamer, co-host
                   of G4TV's Attack of the Show, co-host of Fear & Malding with
                   Hasan Piker and content creator for 100 Thieves. You can find
@@ -269,23 +247,12 @@ export default function Home() {
             <div className="w-full px-4 ml-auto mr-auto md:w-5/12">
               <div className="hero-container">
                 <h2
-                  className="text-4xl hero glitch layers"
-                  data-text="WE ARE THE ARCH VILLAINS"
+                  className="text-2xl md:text-4xl hero glitch layers"
+                  data-text="ARCH VILLAIN"
                 >
-                  <span>
-                    WE ARE THE <br /> ARCH VILLAINS
-                  </span>
+                  <span>ARCH VILLAIN</span>
                 </h2>
               </div>
-              {/* <GlitchText
-                className="w-2/3 mx-auto text-4xl font-semibold text-center text-gray-300 font-bebas"
-                component="h3"
-                color1="rgb(0,0,0)"
-                color2="rgb(172,21,21)"
-                duration={5000}
-              >
-                WE ARE THE ARCH VILLAINS
-              </GlitchText> */}
               <p className="mt-4 mb-4 text-lg font-light leading-relaxed text-gray-100">
                 Debitis sit occaecati ut nam sequi sapiente nihil. Et maxime a
                 delectus ea laudantium. Aut nam voluptatem enim dolor et dolorem
@@ -347,7 +314,7 @@ export default function Home() {
       </section>
 
       {/* MERCH SECTION */}
-      <section className="relative py-20">
+      <section className="relative px-4 py-20">
         <div
           className="absolute top-0 left-0 right-0 bottom-auto w-full -mt-20 overflow-hidden pointer-events-none"
           style={{ height: "80px", transform: "translateZ(0)" }}
@@ -370,7 +337,10 @@ export default function Home() {
 
         <div className="container px-4 mx-auto">
           <div className="hero-container">
-            <h2 className="text-6xl hero glitch layers" data-text="MERCH">
+            <h2
+              className="text-3xl md:text-5xl mb-4 hero glitch layers"
+              data-text="MERCH"
+            >
               <span>MERCH</span>
             </h2>
           </div>

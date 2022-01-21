@@ -5,7 +5,7 @@ import { MdClose, MdOutlineMenu } from "react-icons/md";
 const logo =
   "https://static-cdn.jtvnw.net/jtv_user_pictures/0526935c-5783-4590-8dc1-16445842633d-profile_image-70x70.png";
 
-export const Navbar = ({ transparent, siteTitle }) => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,7 +16,7 @@ export const Navbar = ({ transparent, siteTitle }) => {
             <img src={logo} alt="Will Neff Logo" className="inline" />
           </a>
           <button
-            className="block px-3 py-1 text-xl leading-none bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
+            className="fixed right-4 top-8 block px-3 py-1 text-xl leading-none bg-black/20 rounded-full border border-transparent border-solid outline-none cursor-pointer lg:hidden focus:outline-none"
             type="button"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -36,57 +36,57 @@ export const Navbar = ({ transparent, siteTitle }) => {
           }
         >
           <ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
-            <li className="flex items-center">
+            <li className="text-white flex items-center mx-3 my-2 lg:my-0 transition-colors duration-200 ease-in-out hover:text-purple-500">
               <a
-                className="flex items-center px-3 py-4 text-xs font-bold uppercase lg:py-2"
+                className="flex items-center text-xs font-bold uppercase lg:py-2"
                 href="https://twitch.tv/willneff"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaTwitch className="text-lg text-white lg:text-2xl hover:text-purple-500" />
-                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-purple-300">
+                <FaTwitch className="text-lg lg:text-2xl" />
+                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-purple-300/70">
                   Twitch
                 </span>
               </a>
             </li>
 
-            <li className="flex items-center">
+            <li className="text-white flex items-center mx-3 my-2 lg:my-0 transition-colors duration-200 ease-in-out hover:text-blue-400">
               <a
-                className="flex items-center px-3 py-4 text-xs font-bold uppercase lg:py-2"
+                className="flex items-center text-xs font-bold uppercase lg:py-2"
                 href="https://www.twitter.com/thewillneff"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaTwitter className="text-lg text-white lg:text-2xl hover:text-blue-400" />
-                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-blue-300">
+                <FaTwitter className="text-lg lg:text-2xl" />
+                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-blue-300/70">
                   Twitter
                 </span>
               </a>
             </li>
 
-            <li className="flex items-center">
+            <li className="text-white flex items-center mx-3 my-2 lg:my-0 transition-colors duration-200 ease-in-out hover:text-[rgb(188,22,142)]">
               <a
-                className="flex items-center px-3 py-4 text-xs font-bold uppercase lg:py-2"
+                className="flex items-center text-xs font-bold uppercase lg:py-2"
                 href="https://www.instagram.com/thewillneff/?hl=en"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaInstagram className="text-lg text-white lg:text-2xl hover:text-[rgb(188,22,142)]" />
-                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-yellow-600">
+                <FaInstagram className="text-lg lg:text-2xl" />
+                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-yellow-600/70">
                   Instagram
                 </span>
               </a>
             </li>
 
-            <li className="flex items-center">
+            <li className="text-white flex items-center mx-3 my-2 lg:my-0 transition-colors duration-200 ease-in-out hover:text-red-600">
               <a
-                className="flex items-center px-3 py-4 text-xs font-bold uppercase lg:py-2"
+                className="flex items-center text-xs font-bold uppercase lg:py-2"
                 href="https://www.youtube.com/channel/UCFsDMlkYLpTVt9-cqmZxqZg"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaYoutube className="text-lg text-white lg:text-2xl hover:text-red-600" />
-                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-red-300">
+                <FaYoutube className="text-lg lg:text-2xl" />
+                <span className="inline-block ml-2 text-base tracking-tight text-white underline lg:hidden decoration-wavy decoration-red-300/70">
                   YouTube
                 </span>
               </a>

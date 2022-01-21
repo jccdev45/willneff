@@ -20,23 +20,16 @@ export const Footer = () => {
           ></polygon>
         </svg>
       </div>
-      <div className="container px-20 mx-auto">
-        {/* <div className="flex flex-wrap"> */}
+      <div className="container px-10 md:px-20 mx-auto">
         <div className="w-full px-4 mx-auto text-center md:w-6/12">
           <div className="hero-container">
-            <h2 className="text-4xl hero glitch layers" data-text="JUICE ME UP">
+            <h2
+              className="text-2xl md:text-5xl hero glitch layers"
+              data-text="JUICE ME UP"
+            >
               <span>JUICE ME UP</span>
             </h2>
           </div>
-          {/* <GlitchText
-            className="text-5xl font-semibold text-gray-300 font-bebas"
-            component="h4"
-            color1="rgb(0,0,0)"
-            color2="rgb(172,21,21)"
-            duration={5000}
-          >
-            JUICE ME UP
-          </GlitchText> */}
           <div className="flex items-center justify-center gap-3 mt-8">
             <a
               href="https://twitch.tv/willneff"
@@ -44,7 +37,7 @@ export const Footer = () => {
               rel="noreferrer"
               className="p-2 bg-white rounded-full group"
             >
-              <FaTwitch className="m-auto text-lg text-purple-500 transition-transform duration-200 ease-in-out group-hover:scale-105" />
+              <FaTwitch className="m-auto text-lg text-purple-500 transition-transform duration-200 ease-in-out group-hover:scale-125" />
             </a>
             <a
               href="https://www.twitter.com/thewillneff"
@@ -52,7 +45,7 @@ export const Footer = () => {
               rel="noreferrer"
               className="p-2 bg-white rounded-full group"
             >
-              <FaTwitter className="m-auto text-lg text-blue-400 transition-transform duration-200 ease-in-out group-hover:scale-105" />
+              <FaTwitter className="m-auto text-lg text-blue-400 transition-transform duration-200 ease-in-out group-hover:scale-125" />
             </a>
             <a
               href="https://www.instagram.com/thewillneff/?hl=en"
@@ -60,7 +53,7 @@ export const Footer = () => {
               rel="noreferrer"
               className="p-2 bg-white rounded-full group"
             >
-              <FaInstagram className="m-auto text-lg group-hover:scale-105 transition-transform duration-200 ease-in-out text-[rgb(188,22,142)]" />
+              <FaInstagram className="m-auto text-lg group-hover:scale-125 transition-transform duration-200 ease-in-out text-[rgb(188,22,142)]" />
             </a>
             <a
               href="https://www.youtube.com/channel/UCFsDMlkYLpTVt9-cqmZxqZg"
@@ -68,7 +61,7 @@ export const Footer = () => {
               rel="noreferrer"
               className="p-2 bg-white rounded-full group"
             >
-              <FaYoutube className="m-auto text-lg text-red-600 transition-transform duration-200 ease-in-out group-hover:scale-105" />
+              <FaYoutube className="m-auto text-lg text-red-600 transition-transform duration-200 ease-in-out group-hover:scale-125" />
             </a>
           </div>
         </div>

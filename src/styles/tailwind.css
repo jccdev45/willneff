@@ -28,7 +28,7 @@
 
 @layer base {
   body {
-    @apply bg-black;
+    @apply bg-black scroll-smooth;
   }
   /* body {
     background-image: var(--neff-banner);
