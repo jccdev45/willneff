@@ -70,7 +70,7 @@ export const Footer = () => {
         <div className="flex flex-wrap items-center justify-center text-lg md:justify-between font-bebas">
           <div className="w-full px-4 mx-auto text-center md:w-4/12">
             <div className="py-1 text-2xl font-semibold text-gray-200">
-              Copyright © {new Date().getFullYear()} Will Neff
+              Copyright ©2022 Will Neff
             </div>
             <div className="py-1 font-semibold text-gray-200">
               Site by:{" "}
